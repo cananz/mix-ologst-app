@@ -1,0 +1,15 @@
+<h2><%= @ingredient.name %></h2>
+
+<% if !@cocktails.empty? %>
+  <h3>Cocktails featuring <%= @ingredient.name %>:</h3>
+  <ul>
+    <% @cocktails.each do |c| %>
+      <li><%= link_to c.name, cocktail_path(c) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No one seems to be using <%= @ingredient.name %>. </p>
+  <%= link_to "Delete this ingredient", ingredient_path(@ingredient), method: :delete %><br>
+<% end %>
+<%= link_to "Inspired? Create a New Cocktail", new_cocktail_path %><br>
+<%= link_to "Go back to the cupboard", ingredients_path %>

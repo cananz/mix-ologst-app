@@ -1,7 +1,10 @@
 <h2>Thirsty?</h2>
 
+<ul>
 <% @cocktails.each do |c| %>
-  <p><%= link_to c.name, cocktail_path(c) %></p>
+  <li><%= link_to c.name, cocktail_path(c) %></li>
 <% end %>
+</ul>
 
-<%= link_to "Mixed a New Drink?", new_cocktail_path %>
+<%= link_to "Mixed a New Drink?", new_cocktail_path %><br>
+<%= link_to "See what's in the cabinet", ingredients_path %>

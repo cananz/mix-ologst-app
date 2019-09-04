@@ -1,0 +1,11 @@
+<h2>Edit <%= @cocktail.name %></h2>
+<%= form_for @cocktail do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.collection_check_boxes(:ingredient_ids, @ingredients, :id, :name) %><br><br>
+
+  <%= f.submit %>
+<% end %>
+
+  <%= link_to "Delete this drink", cocktail_path(@cocktail), method: :delete %>

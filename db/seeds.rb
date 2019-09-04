@@ -13,4 +13,4 @@
   gt = Cocktail.find_or_create_by(name: "Gin & Tonic")
   gt.ingredients = [gin, tonic, lime]
 
-  
+
