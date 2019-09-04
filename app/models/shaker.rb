@@ -1,0 +1,2 @@
+class Shaker < ApplicationRecord
+end

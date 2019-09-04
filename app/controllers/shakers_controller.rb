@@ -1,0 +1,2 @@
+class ShakersController < ApplicationController
+end
