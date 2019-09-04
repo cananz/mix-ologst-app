@@ -18,10 +18,6 @@ class IngredientsController < ApplicationController
     @cocktails = @ingredient.cocktails
   end
 
-  def edit
-    @ingredient = Ingredient.find(params[:id])
-  end
-
   def update
     @ingredient = Ingredient.find(params[:id])
     @ingredient.update(i_params)
