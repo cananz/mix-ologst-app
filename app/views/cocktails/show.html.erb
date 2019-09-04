@@ -1,0 +1,11 @@
+
+  <h2><%= @cocktail.name %></h2>
+
+  <h3>Ingredients: </h3>
+  <ul>
+    <% @cocktail.ingredients.each do |ci| %>
+    <li><%= link_to ci.name, ingredient_path(ci) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Pick another drink", cocktails_path %>

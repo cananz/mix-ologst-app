@@ -6,6 +6,8 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    @ingredients = Ingredient.all
+
   end
 
   def create
@@ -36,7 +38,7 @@ class CocktailsController < ApplicationController
   private
 
     def c_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, ingredient: :ingredient)
     end
 
 end
